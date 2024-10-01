@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Perfiles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Gestión de Perfiles</h2>
+
+        <!-- Formulario básico para agregar perfiles -->
+        <form id="profileForm" class="mb-4">
+            <div class="form-group">
+                <label for="name">Nombre del Perfil</label>
+                <input type="text" id="name" class="form-control" placeholder="Ingrese el nombre del perfil" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <textarea id="description" class="form-control" rows="3" placeholder="Ingrese una breve descripción" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="permissions">Permisos</label>
+                <select id="permissions" class="form-control" multiple required>
+                    <option value="read">Leer</option>
+                    <option value="write">Escribir</option>
+                    <option value="delete">Eliminar</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+
+            <button type="button" id="addProfileBtn" class="btn btn-primary">Agregar Perfil</button>
+            <button type="button" id="updateProfileBtn" class="btn btn-warning" style="display:none;">Actualizar Perfil</button>
+            <button type="button" id="cancelEditBtn" class="btn btn-secondary" style="display:none;">Cancelar</button>
+        </form>
+
+        <!-- Tabla de perfiles -->
+        <h3>Lista de Perfiles</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre del Perfil</th>
+                    <th>Descripción</th>
+                    <th>Permisos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="profileList">
+                <!-- Las filas de perfiles se añadirán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Lista de perfiles (inicialmente vacía)
+        let profiles = [];
+        let editingIndex = null;
+
+        // Obtener referencias a los elementos del DOM
+        const nameInput = document.getElementById('name');
+        const descriptionInput = document.getElementById('description');
+        const permissionsInput = document.getElementById('permissions');
+        const profileList = document.getElementById('profileList');
+        const addProfileBtn = document.getElementById('addProfileBtn');
+        const updateProfileBtn = document.getElementById('updateProfileBtn');
+        const cancelEditBtn = document.getElementById('cancelEditBtn');
+
+        // Función para agregar un nuevo perfil
+        addProfileBtn.addEventListener('click', function() {
+            const name = nameInput.value;
+            const description = descriptionInput.value;
+            const permissions = Array.from(permissionsInput.selectedOptions).map(option => option.value);
+
+            if (name && description && permissions.length > 0) {
+                profiles.push({ name, description, permissions });
+                renderProfileList();
+                clearForm();
+            }
+        });
+
+        // Función para renderizar la lista de perfiles en la tabla
+        function renderProfileList() {
+            profileList.innerHTML = '';
+            profiles.forEach((profile, index) => {
+                const row = `
+                    <tr>
+                        <td>${profile.name}</td>
+                        <td>${profile.description}</td>
+                        <td>${profile.permissions.join(', ')}</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm" onclick="editProfile(${index})">Editar</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteProfile(${index})">Eliminar</button>
+                        </td>
+                    </tr>
+                `;
+                profileList.innerHTML += row;
+            });
+        }
+
+        // Función para limpiar el formulario
+        function clearForm() {
+            nameInput.value = '';
+            descriptionInput.value = '';
+            permissionsInput.value = '';
+            addProfileBtn.style.display = 'block';
+            updateProfileBtn.style.display = 'none';
+            cancelEditBtn.style.display = 'none';
+            editingIndex = null;
+        }
+
+        // Función para eliminar un perfil
+        function deleteProfile(index) {
+            profiles.splice(index, 1);
+            renderProfileList();
+        }
+
+        // Función para editar un perfil
+        function editProfile(index) {
+            const profile = profiles[index];
+            nameInput.value = profile.name;
+            descriptionInput.value = profile.description;
+            Array.from(permissionsInput.options).forEach(option => {
+                option.selected = profile.permissions.includes(option.value);
+            });
+
+            editingIndex = index;
+            addProfileBtn.style.display = 'none';
+            updateProfileBtn.style.display = 'block';
+            cancelEditBtn.style.display = 'block';
+        }
+
+        // Función para actualizar un perfil
+        updateProfileBtn.addEventListener('click', function() {
+            const name = nameInput.value;
+            const description = descriptionInput.value;
+            const permissions = Array.from(permissionsInput.selectedOptions).map(option => option.value);
+
+            if (name && description && permissions.length > 0 && editingIndex !== null) {
+                profiles[editingIndex] = { name, description, permissions };
+                renderProfileList();
+                clearForm();
+            }
+        });
+
+        // Función para cancelar la edición
+        cancelEditBtn.addEventListener('click', function() {
+            clearForm();
+        });
+    </script>
+</body>
+</html>
