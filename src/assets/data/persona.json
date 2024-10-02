@@ -1,6 +1,5 @@
 {
   "users": [
-  
     {
       "email": "bibliotecario@gmail.com",
       "password": "$2a$10$J8HKcrt/.AbdEP6TKWMvpu3psUTqHVwcWfYO42kJxJHjE0jGR4/Si",
@@ -15,6 +14,188 @@
       "email": "invitado@gmail.com",
       "password": "$2a$10$KNBeln58.lAKzRJEhx6osOj4CQF.gZpeWnpeeVIxB1Fq6LrkSU8PC",
       "id": 4
+    }
+  ],
+  "libros": [
+    {
+      "id": 1,
+      "title": "Don Quijote de la Mancha",
+      "author": "Miguel de Cervantes",
+      "year": 1605,
+      "genre": "Novela",
+      "stock": 5,
+      "price": 15.99
+    },
+    {
+      "id": 2,
+      "title": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "year": 1967,
+      "genre": "Novela",
+      "stock": 8,
+      "price": 18.99
+    },
+    {
+      "id": 3,
+      "title": "La sombra del viento",
+      "author": "Carlos Ruiz Zafón",
+      "year": 2001,
+      "genre": "Misterio",
+      "stock": 10,
+      "price": 14.99
+    },
+    {
+      "id": 4,
+      "title": "El Principito",
+      "author": "Antoine de Saint-Exupéry",
+      "year": 1943,
+      "genre": "Fábula",
+      "stock": 12,
+      "price": 12.99
+    },
+    {
+      "id": 5,
+      "title": "1984",
+      "author": "George Orwell",
+      "year": 1949,
+      "genre": "Distopía",
+      "stock": 7,
+      "price": 16.99
+    },
+    {
+      "id": 6,
+      "title": "Orgullo y prejuicio",
+      "author": "Jane Austen",
+      "year": 1813,
+      "genre": "Romance",
+      "stock": 6,
+      "price": 10.99
+    },
+    {
+      "id": 7,
+      "title": "Crimen y castigo",
+      "author": "Fiódor Dostoyevski",
+      "year": 1866,
+      "genre": "Filosofía",
+      "stock": 4,
+      "price": 19.99
+    },
+    {
+      "id": 8,
+      "title": "El amor en los tiempos del cólera",
+      "author": "Gabriel García Márquez",
+      "year": 1985,
+      "genre": "Romance",
+      "stock": 9,
+      "price": 17.99
+    },
+    {
+      "id": 9,
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "year": 1953,
+      "genre": "Ciencia Ficción",
+      "stock": 5,
+      "price": 13.99
+    },
+    {
+      "id": 10,
+      "title": "El Hobbit",
+      "author": "J.R.R. Tolkien",
+      "year": 1937,
+      "genre": "Fantasía",
+      "stock": 6,
+      "price": 20.99
+    },
+    {
+      "id": 11,
+      "title": "Matar a un ruiseñor",
+      "author": "Harper Lee",
+      "year": 1960,
+      "genre": "Drama",
+      "stock": 4,
+      "price": 11.99
+    },
+    {
+      "id": 12,
+      "title": "El señor de los anillos",
+      "author": "J.R.R. Tolkien",
+      "year": 1954,
+      "genre": "Fantasía",
+      "stock": 7,
+      "price": 22.99
+    },
+    {
+      "id": 13,
+      "title": "Drácula",
+      "author": "Bram Stoker",
+      "year": 1897,
+      "genre": "Terror",
+      "stock": 5,
+      "price": 14.99
+    },
+    {
+      "id": 14,
+      "title": "El retrato de Dorian Gray",
+      "author": "Oscar Wilde",
+      "year": 1890,
+      "genre": "Filosofía",
+      "stock": 6,
+      "price": 13.49
+    },
+    {
+      "id": 15,
+      "title": "Las aventuras de Sherlock Holmes",
+      "author": "Arthur Conan Doyle",
+      "year": 1892,
+      "genre": "Misterio",
+      "stock": 9,
+      "price": 16.49
+    },
+    {
+      "id": 16,
+      "title": "Ulises",
+      "author": "James Joyce",
+      "year": 1922,
+      "genre": "Modernismo",
+      "stock": 3,
+      "price": 18.49
+    },
+    {
+      "id": 17,
+      "title": "La metamorfosis",
+      "author": "Franz Kafka",
+      "year": 1915,
+      "genre": "Existencialismo",
+      "stock": 5,
+      "price": 9.99
+    },
+    {
+      "id": 18,
+      "title": "En busca del tiempo perdido",
+      "author": "Marcel Proust",
+      "year": 1913,
+      "genre": "Filosofía",
+      "stock": 4,
+      "price": 21.49
+    },
+    {
+      "id": 19,
+      "title": "El alquimista",
+      "author": "Paulo Coelho",
+      "year": 1988,
+      "genre": "Filosofía",
+      "stock": 10,
+      "price": 14.49
+    },
+    {
+      "id": 20,
+      "title": "Cumbres borrascosas",
+      "author": "Emily Brontë",
+      "year": 1847,
+      "genre": "Romance",
+      "stock": 6,
+      "price": 12.99
     }
   ]
 }

@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <h2>Carrito de Compras - Libros</h2>
+    <table class="table table-hover mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of carrito">
+                <td>{{ item.title }}</td>
+                <td>{{ item.author }}</td>
+                <td>{{ item.price }}</td> 
+                <td><input type="number" [(ngModel)]="item.cantidad" class="form-control" style="width: 80px;"></td>
+                <td>{{ item.price * item.cantidad }}</td> 
+                <td><span class="remove-item" (click)="eliminarProducto(item.id)">Eliminar</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="mt-4">
+        <p class="total-summary">Total: {{ total }}</p> 
+        <button class="checkout-btn btn btn-success">Proceder al Pago</button>
+    </div>
+</div>

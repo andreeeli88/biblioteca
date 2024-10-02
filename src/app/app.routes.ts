@@ -6,6 +6,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { adminGuard, bibliotecarioGuard, invitadosGuard } from './guardian/privado.guard';
 import { GestionLibroComponent } from './components/gestion-libro/gestion-libro.component';
 import { GestionUsuariosComponent } from './components/gestion-usuarios/gestion-usuarios.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 export const routes: Routes = [
     {path:"home",component:HomeComponent ,canActivate:[invitadosGuard]},
@@ -13,6 +14,7 @@ export const routes: Routes = [
     {path:"prestamos",component:PrestamosComponent, canActivate:[bibliotecarioGuard]},
     {path:"gestion",component:GestionLibroComponent, canActivate:[adminGuard]},
     {path:"usuarios",component:GestionUsuariosComponent, canActivate:[adminGuard]},
+    {path:"carrito",component:CarritoComponent},
 
     {path:"",component:LoginComponent },
    
