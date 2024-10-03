@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CarritoService } from '../../services/carrito-service.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+declare var bootstrap: any;
 @Component({
   selector: 'app-carrito',
   standalone: true,
@@ -37,5 +37,18 @@ export class CarritoComponent {
   
     get total() {
       return this.carrito.reduce((acc, item) => acc + (item.price * item.cantidad), 0);
+    }
+    abrirModal() {
+      const modalElement = document.getElementById('pagoModal');
+      if (modalElement) {
+        const modal = new bootstrap.Modal(modalElement);
+        modal.show();
+      }
+    }
+
+   
+    confirmarPago() {
+      console.log('Pago confirmado, total: ', this.total);
+     
     }
 }
