@@ -35,3 +35,13 @@ export const invitadosGuard: CanActivateFn = (route, state) => {
   }
   return false;
 };
+export const adminobibliotecarioGuard: CanActivateFn = (route, state) => {
+  if (typeof window !== 'undefined' && window.sessionStorage) {
+    let acceso = sessionStorage.getItem('login');
+    let rol = sessionStorage.getItem('role');
+    return acceso === 'true' && (rol === 'admin' || rol === 'bibliotecario');
+  }
+  return false;
+};
+
+
