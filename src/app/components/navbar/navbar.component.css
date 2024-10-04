@@ -1,0 +1,60 @@
+.library-navbar {
+    background-color: #f4efe4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Georgia', serif;
+    position: relative;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #5a3e1b;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link.active::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: #9b6f3c;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    transition: width 0.3s ease;
+    width: 100%;
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+    color: #9b6f3c;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #9b6f3c;
+    background-color: rgba(155, 111, 60, 0.1); /* Este es el fondo suave al hacer hover */
+    border-radius: 5px;
+}
+
+/* Ajustes para eliminar la barra café al pasar el mouse */
+.dropdown-menu {
+    background-color: #f4efe4;
+    border-radius: 5px;
+}
+
+.dropdown-item {
+    color: #5a3e1b;
+    padding: 10px 15px;
+}
+
+.dropdown-item:hover {
+    background-color: transparent; /* No cambia el fondo al pasar el mouse */
+    color: #9b6f3c;
+}

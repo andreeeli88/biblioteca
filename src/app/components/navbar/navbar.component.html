@@ -1,36 +1,37 @@
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-    <div class="container-fluid">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" routerLink="home">Home</a>
-        </li>
-      
-          <li class="nav-item">
-            <a class="nav-link" routerLink="catalogo">Catálogo</a>
-          </li>
-     
-        
-        
-          <li class="nav-item">
-            <a class="nav-link" routerLink="login">Login</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" routerLink="usuarios">Gestion de usuarios</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" routerLink="carrito">Carrito de compras</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="nosotros">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="terminos">Terminos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="contactos">Contactos</a>
-          </li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-sm bg-light navbar-light library-navbar">
+  <div class="container-fluid">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="home">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="catalogo">Catálogo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="usuarios">Gestión de usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="carrito">Carrito de compras</a>
+      </li>
+
+      <!-- Menú desplegable para "Nosotros", "Términos" y "Contactos" -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Información
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="infoDropdown">
+          <li><a class="dropdown-item" routerLink="nosotros">Nosotros</a></li>
+          <li><a class="dropdown-item" routerLink="terminos">Términos</a></li>
+          <li><a class="dropdown-item" routerLink="contactos">Contactos</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Login al lado derecho -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>

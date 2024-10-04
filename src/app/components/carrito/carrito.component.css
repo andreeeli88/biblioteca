@@ -1,0 +1,73 @@
+.card {
+    background-color: #f4efe4; /* Color de fondo de las tarjetas */
+    color: #5a3e1b; /* Color del texto en las tarjetas */
+}
+
+.card-title {
+    font-family: 'Georgia', serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #5a3e1b;
+}
+
+.card-text {
+    font-family: 'Georgia', serif;
+}
+
+.total-summary {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #5a3e1b;
+}
+
+.checkout-btn {
+    background-color: #9b6f3c;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #7e5b30;
+}
+
+.modal-content {
+    border: 1px solid #9b6f3c; /* Borde del modal */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+.modal-header {
+    background-color: #5a3e1b; /* Fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+}
+
+.modal-body {
+    background-color: #f4efe4; /* Fondo del cuerpo del modal */
+    color: #5a3e1b; /* Color del texto del cuerpo */
+}
+
+.modal-footer {
+    background-color: #f4efe4; /* Fondo del pie del modal */
+}
+
+.btn-primary {
+    background-color: #9b6f3c; /* Fondo del botón de confirmar */
+    border: none; /* Sin borde */
+    color: white; /* Color del texto del botón */
+}
+
+.btn-primary:hover {
+    background-color: #7e5b30; /* Fondo del botón al pasar el ratón */
+}
+
+.btn-secondary {
+    border: 1px solid #9b6f3c; /* Borde del botón de cancelar */
+    color: #5a3e1b; /* Color del texto del botón */
+}
+
+.btn-secondary:hover {
+    background-color: rgba(155, 111, 60, 0.1); /* Fondo del botón de cancelar al pasar el ratón */
+}

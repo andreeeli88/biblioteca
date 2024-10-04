@@ -1,50 +1,48 @@
 <div class="container mt-5">
-    <h2>Carrito de Compras - Libros</h2>
-    <table class="table table-hover mt-4">
-        <thead class="table-dark">
-            <tr>
-                <th>Título</th>
-                <th>Autor</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of carrito">
-                <td>{{ item.title }}</td>
-                <td>{{ item.author }}</td>
-                <td>{{ item.price }}</td> 
-                <td><input type="number" [(ngModel)]="item.cantidad" class="form-control" style="width: 80px;"></td>
-                <td>{{ item.price * item.cantidad }}</td> 
-                <td><span class="remove-item" (click)="eliminarProducto(item.id)">Eliminar</span></td>
-            </tr>
-        </tbody>
-    </table>
+  <h2 class="catalogo-title">Carrito de Compras - Libros</h2>
+  
+  <div class="row mt-4">
+      <ng-container *ngFor="let item of carrito">
+          <div class="col-md-4 mb-4">
+              <div class="card" style="border: 1px solid #9b6f3c; border-radius: 10px;">
+                  <div class="card-body">
+                      <h5 class="card-title">{{ item.title }}</h5>
+                      <p class="card-text">Autor: {{ item.author }}</p>
+                      <p class="card-text">Precio: {{ item.price | currency }}</p>
+                      <div class="form-group">
+                          <label for="cantidad-{{ item.id }}">Cantidad:</label>
+                          <input type="number" id="cantidad-{{ item.id }}" [(ngModel)]="item.cantidad" class="form-control" style="width: 80px;">
+                      </div>
+                      <p class="card-text">Subtotal: {{ item.price * item.cantidad | currency }}</p>
+                      <button class="btn btn-danger" (click)="eliminarProducto(item.id)">Eliminar</button>
+                  </div>
+              </div>
+          </div>
+      </ng-container>
+  </div>
 
-    <div class="mt-4">
-        <p class="total-summary">Total: {{ total }}</p> 
-        <button class="checkout-btn btn btn-success" (click)="abrirModal()">Proceder al Pago</button>
-    </div>
+  <div class="mt-4">
+      <p class="total-summary">Total: {{ total | currency }}</p> 
+      <button class="checkout-btn btn btn-success" (click)="abrirModal()">Proceder al Pago</button>
+  </div>
 </div>
 
 <!-- Modal -->
 <div class="modal fade" id="pagoModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalLabel">Confirmación de Pago</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-content" style="border: 1px solid #9b6f3c; border-radius: 10px;">
+          <div class="modal-header" style="background-color: #5a3e1b; color: white;">
+              <h5 class="modal-title" id="modalLabel">Confirmación de Pago</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="background-color: #f4efe4; color: #5a3e1b;">
+              <p>El total a pagar es: <strong>{{ total | currency }}</strong></p>
+              <p>¿Deseas proceder con el pago?</p>
+          </div>
+          <div class="modal-footer" style="background-color: #f4efe4;">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary" (click)="confirmarPago()">Confirmar Pago</button>
+          </div>
       </div>
-      <div class="modal-body">
-        <p>El total a pagar es: <strong>{{ total }}</strong></p>
-        <p>¿Deseas proceder con el pago?</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" (click)="confirmarPago()">Confirmar Pago</button>
-      </div>
-    </div>
   </div>
 </div>

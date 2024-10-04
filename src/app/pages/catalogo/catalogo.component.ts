@@ -3,7 +3,7 @@ import { CatalogoService } from '../../services/catalogo.service';
 import { CarritoService } from '../../services/carrito-service.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import bootstrap from '../../../main.server';
 @Component({
   selector: 'app-catalogo',
   standalone: true,
@@ -22,6 +22,8 @@ export class CatalogoComponent {
   precioMin: number = 0;
   precioMax: number = 1000;
 
+   // Variable para controlar la visibilidad del modal
+   isModalVisible = false;
   ngOnInit() {
     this.servicio.getProdcuto().subscribe(t => {
       this.producto = t;
@@ -53,5 +55,17 @@ export class CatalogoComponent {
       // Retornar los productos que cumplen ambas condiciones
       return cumpleCategoria && cumplePrecio;
     });
+  }
+  // Mostrar el modal personalizado
+  mostrarPopup() {
+    this.aplicarFiltros();
+    if (this.categoriaSelecc !== '') {
+      this.isModalVisible = true;  // Hacer visible el modal
+    }
+  }
+
+  // Ocultar el modal personalizado
+  cerrarModal() {
+    this.isModalVisible = false;
   }
 }

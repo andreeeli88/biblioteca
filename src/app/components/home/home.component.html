@@ -1,83 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Online</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
+            background-color: #f4f1e6; /* Color de fondo suave */
+            color: #3d2a2a; /* Color de texto */
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            padding: 14px 20px;
-            display: block;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
+
         .hero {
-            background-color: #f8f8f8;
-            padding: 50px;
-            text-align: center;
-        }
-        .hero h1 {
-            margin: 0;
-            font-size: 3rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #555;
-        }
-        .gallery {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-        }
-        .gallery img {
-            width: 200px;
-            height: 300px;
-            object-fit: cover;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #333;
+            background-color: #5a3e1b; /* Color de fondo del héroe */
             color: white;
+            padding: 50px 20px;
             text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+        }
+
+        .carousel-item img {
+            height: 400px; /* Altura fija para las imágenes del carrusel */
+            object-fit: cover; /* Para que las imágenes se recorten adecuadamente */
+        }
+
+        section.container {
+            margin-top: 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #5a3e1b; /* Color de fondo del pie */
+            color: white; /* Color del texto del pie */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        ul {
+            list-style-type: none; /* Sin viñetas */
+            padding: 0;
+        }
+
+        ul li {
+            background: #d8c4a4; /* Color de fondo de los elementos de la lista */
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px; /* Esquinas redondeadas */
         }
     </style>
 </head>
+
 <body>
-    
-
-  
-
     <section class="hero">
         <h1>Bienvenido a la Biblioteca</h1>
         <p>Tu mundo de conocimiento a solo un clic de distancia.</p>
     </section>
 
+    <section id="carouselExample" class="carousel slide mt-4" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/800x400?text=Carrusel+Imagen+1" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400?text=Carrusel+Imagen+2" class="d-block w-100" alt="Imagen 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/800x400?text=Carrusel+Imagen+3" class="d-block w-100" alt="Imagen 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </section>
 
+    <section class="container mt-5">
+        <h2>Sobre Nosotros</h2>
+        <p>La Biblioteca Online es un espacio donde los amantes de la lectura pueden encontrar una amplia variedad de libros, desde clásicos hasta las últimas novedades. Nuestro objetivo es fomentar el amor por la lectura y proporcionar acceso a la información de calidad a todos.</p>
+
+        <h2>Servicios</h2>
+        <ul>
+            <li>Acceso a una vasta colección de libros digitales.</li>
+            <li>Recomendaciones personalizadas según tus intereses.</li>
+            <li>Clubes de lectura y eventos en línea.</li>
+            <li>Soporte al usuario y asistencia técnica.</li>
+        </ul>
+        
+        <h2>Libros Destacados</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/150x200?text=Libro+1" class="card-img-top" alt="Libro 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Libro 1</h5>
+                        <p class="card-text">Una breve descripción del libro 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/150x200?text=Libro+2" class="card-img-top" alt="Libro 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Libro 2</h5>
+                        <p class="card-text">Una breve descripción del libro 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/150x200?text=Libro+3" class="card-img-top" alt="Libro 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Libro 3</h5>
+                        <p class="card-text">Una breve descripción del libro 3.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/150x200?text=Libro+4" class="card-img-top" alt="Libro 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Título del Libro 4</h5>
+                        <p class="card-text">Una breve descripción del libro 4.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Biblioteca Online. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
 
+</html>
