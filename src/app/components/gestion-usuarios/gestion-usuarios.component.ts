@@ -6,8 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-gestion-usuarios',
-  standalone: true,  // Esto indica que es un componente autónomo
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],  // Importar módulos necesarios
+  standalone: true,  
+  imports: [CommonModule, FormsModule, ReactiveFormsModule], 
   templateUrl: './gestion-usuarios.component.html',
   styleUrls: ['./gestion-usuarios.component.css']
 })
