@@ -9,5 +9,16 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-
+  acceso:any="";
+  rol : any ="";
+  
+  ngOnInit(){
+    this.acceso=sessionStorage.getItem('login' );
+    this.rol=sessionStorage.getItem('role' );
+  }
+  cerrar(){
+    sessionStorage.removeItem('login');
+    sessionStorage.removeItem('rol');
+    window.location.href = "/login";
+  }
 }

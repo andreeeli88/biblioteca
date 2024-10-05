@@ -22,7 +22,7 @@ export const routes: Routes = [
     {path:"nosotros",component:NosotrosComponent},
     {path:"terminos",component:TerminosComponent},
     {path:"contactos",component:ContactosComponent},
-    {path:"carrito",component:CarritoComponent, canActivate:[adminobibliotecarioGuard]},
+    {path:"carrito",component:CarritoComponent},
 
 
 

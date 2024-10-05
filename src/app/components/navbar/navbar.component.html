@@ -4,17 +4,24 @@
       <li class="nav-item">
         <a class="nav-link active" routerLink="home">Inicio</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="catalogo">Catálogo</a>
-      </li>
+      
+      @if (acceso == "true" && rol == "admin"){
       <li class="nav-item">
         <a class="nav-link" routerLink="usuarios">Gestión de usuarios</a>
       </li>
+      
+  
+     
+    }
+    @if(acceso == "true"){
       <li class="nav-item">
         <a class="nav-link" routerLink="carrito">Carrito de compras</a>
       </li>
-
-      <!-- Menú desplegable para "Nosotros", "Términos" y "Contactos" -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="catalogo">Catálogo</a>
+      </li>
+    }
+   
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Información
@@ -27,11 +34,15 @@
       </li>
     </ul>
 
-    <!-- Login al lado derecho -->
+ 
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" routerLink="login">Login</a>
       </li>
+      <li class="nav-item">
+        <button class="btn btn-outline-danger" (click)="cerrar()">Cerrar</button>
+      </li>
+      
     </ul>
   </div>
 </nav>
