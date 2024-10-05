@@ -9,7 +9,7 @@ import { GestionUsuariosComponent } from './components/gestion-usuarios/gestion-
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { TerminosComponent } from './components/terminos/terminos.component';
-import { ContactosComponent } from './components/contactos/contactos.component';
+import { ContactosComponent } from './pages/contactos/contactos.component';
 
 
 

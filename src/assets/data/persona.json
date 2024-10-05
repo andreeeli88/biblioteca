@@ -24,7 +24,8 @@
       "year": 1605,
       "genre": "Novela",
       "stock": 5,
-      "price": 15.99
+      "price": 15.99,
+      "image": "https://i1.whakoom.com/small/08/15/66d78c3dfb1a48a09f0f5ba46f2e94df.jpg"
     },
     {
       "id": 2,
@@ -33,7 +34,8 @@
       "year": 1967,
       "genre": "Novela",
       "stock": 8,
-      "price": 18.99
+      "price": 18.99,
+      "image": "https://graziamagazine.com/es/wp-content/uploads/sites/12/2024/04/no-te-pierdas-el-primer-trailer-de-cien-anos-de-soledad-de-netflix.jpg"
     },
     {
       "id": 3,
@@ -42,7 +44,8 @@
       "year": 2001,
       "genre": "Misterio",
       "stock": 10,
-      "price": 14.99
+      "price": 14.99,
+      "image": "https://images.cdn2.buscalibre.com/fit-in/360x360/4a/f8/4af862174ba709db62744f988c62e3b6.jpg"
     },
     {
       "id": 4,
@@ -51,7 +54,8 @@
       "year": 1943,
       "genre": "Fábula",
       "stock": 12,
-      "price": 12.99
+      "price": 12.99,
+      "image": "https://www.mrbooks.com/mrbooks/portadas/9786287507326.webp"
     },
     {
       "id": 5,
@@ -60,7 +64,8 @@
       "year": 1949,
       "genre": "Distopía",
       "stock": 7,
-      "price": 16.99
+      "price": 16.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB1sWr4sn8YtSOh3imkYafuZgE4Z_QXQlfrg&s"
     },
     {
       "id": 6,
@@ -69,7 +74,8 @@
       "year": 1813,
       "genre": "Romance",
       "stock": 6,
-      "price": 10.99
+      "price": 10.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEx50SsSQcRlXhJkmPJIHkT3SMMgM-K_bz8Q&s"
     },
     {
       "id": 7,
@@ -78,7 +84,8 @@
       "year": 1866,
       "genre": "Filosofía",
       "stock": 4,
-      "price": 19.99
+      "price": 19.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJsh6lSCB114MpOQCUTgQ2dc4MXWcWdK4J9A&s"
     },
     {
       "id": 8,
@@ -87,7 +94,8 @@
       "year": 1985,
       "genre": "Romance",
       "stock": 9,
-      "price": 17.99
+      "price": 17.99,
+      "image": "https://bijrd.gob.do/wp-content/uploads/2017/02/El-amor-en-los-tiempos-del-c%C3%B3lera.jpg"
     },
     {
       "id": 9,
@@ -96,7 +104,8 @@
       "year": 1953,
       "genre": "Ciencia Ficción",
       "stock": 5,
-      "price": 13.99
+      "price": 13.99,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/FAHRENHEIT_451_by_Ray_Bradbury%2C_Corgi_1957._160_pages._Cover_by_John_Richards.jpg"
     },
     {
       "id": 10,
@@ -105,7 +114,8 @@
       "year": 1937,
       "genre": "Fantasía",
       "stock": 6,
-      "price": 20.99
+      "price": 20.99,
+      "image": "https://static.wikia.nocookie.net/biblioteca-virtual-de-literatura/images/c/cf/El_Hobbit.jpg/revision/latest?cb=20240110065113&path-prefix=es"
     },
     {
       "id": 11,
@@ -114,7 +124,8 @@
       "year": 1960,
       "genre": "Drama",
       "stock": 4,
-      "price": 11.99
+      "price": 11.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRieytg-K7yT9GBlnAp18Qx-6nITHKXtwW_g&s"
     },
     {
       "id": 12,
@@ -123,7 +134,8 @@
       "year": 1954,
       "genre": "Fantasía",
       "stock": 7,
-      "price": 22.99
+      "price": 22.99,
+      "image": "https://images.cdn3.buscalibre.com/fit-in/360x360/54/49/5449ba87a3e457a22dd6d0972b5c261e.jpg"
     },
     {
       "id": 13,
@@ -132,7 +144,8 @@
       "year": 1897,
       "genre": "Terror",
       "stock": 5,
-      "price": 14.99
+      "price": 14.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW97NxoHJaCYWIzVgs3xWd_H0h18FyNBGbOQ&s"
     },
     {
       "id": 14,
@@ -141,7 +154,8 @@
       "year": 1890,
       "genre": "Filosofía",
       "stock": 6,
-      "price": 13.49
+      "price": 13.49,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXnV2jAsBi1t4VTxHV6HyOGF-iGAxqAt0QHQ&s"
     },
     {
       "id": 15,
@@ -150,7 +164,8 @@
       "year": 1892,
       "genre": "Misterio",
       "stock": 9,
-      "price": 16.49
+      "price": 16.49,
+      "image": "https://www.mrbooks.com/mrbooks/portadas/9788415618829.webp"
     },
     {
       "id": 16,
@@ -159,7 +174,8 @@
       "year": 1922,
       "genre": "Modernismo",
       "stock": 3,
-      "price": 18.49
+      "price": 18.49,
+      "image": "https://static.wikia.nocookie.net/myl-tcg/images/a/a2/Ulises_ori.jpg/revision/latest?cb=20211026031735&path-prefix=es"
     },
     {
       "id": 17,
@@ -168,7 +184,8 @@
       "year": 1915,
       "genre": "Existencialismo",
       "stock": 5,
-      "price": 9.99
+      "price": 9.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAP_tf6V3Plw3XBBHJ0oeD3SR-LycXlrYzew&s"
     },
     {
       "id": 18,
@@ -177,7 +194,8 @@
       "year": 1913,
       "genre": "Filosofía",
       "stock": 4,
-      "price": 21.49
+      "price": 21.49,
+      "image": "https://www.mrbooks.com/mrbooks/portadas/9788416540457.webp"
     },
     {
       "id": 19,
@@ -186,7 +204,8 @@
       "year": 1988,
       "genre": "Filosofía",
       "stock": 10,
-      "price": 14.49
+      "price": 14.49,
+      "image": "https://www.mrbooks.com/mrbooks/portadas/9786287574434.webp"
     },
     {
       "id": 20,
@@ -195,7 +214,8 @@
       "year": 1847,
       "genre": "Romance",
       "stock": 6,
-      "price": 12.99
+      "price": 12.99,
+      "image": "https://www.mrbooks.com/mrbooks/portadas/9788491819431.webp"
     }
   ]
 }

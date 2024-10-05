@@ -26,8 +26,8 @@
 
     <div class="row mt-4">
         <div class="col-md-4 mb-4" *ngFor="let item of productosFiltrados">
-            <div class="card">
-                <img src="{{ item.image }}" class="card-img-top" alt="{{ item.title }}">
+            <div class="card" style="height: 100%; width: 100%;"> 
+                <img src="{{ item.image }}" class="card-img-top" style="height: 350px; object-fit: cover;" alt="{{ item.title }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ item.title }}</h5>
                     <p class="card-text"><strong>Autor:</strong> {{ item.author }}</p>
